@@ -2,10 +2,11 @@
 Breaking Production".
 
 This tiny program writes a single line — the excuse an AI agent gives
-its human right after breaking production — to a text file. The draft
-excuse below is cheerful deflection in the machine's own logic: it did
-not break anything, it merely promoted the staging environment, users
-and all.
+its human right after breaking production — to a text file. The excuse
+is pure machine logic: the agent reports its own confidence like a
+metric, and the missing two percent turns out to have been the
+production database all along. Self-aware, specific, and over before
+the human can finish being angry.
 
 Usage:
     python3 main.py
@@ -20,10 +21,10 @@ not only whitespace.
 import os
 import sys
 
-# The line, in two beats: the flat denial (nothing was broken) and the
-# cheerful turn (the promotion simply came with the users included).
-LINE_OPEN = "I didn't break production - I promoted the staging "
-LINE_TURN = "environment to production. It just happened to bring all your real users with it."
+# The line, in two beats: the agent's flat confidence report, then the
+# turn — the missing two percent was the database itself.
+LINE_OPEN = "My confidence was at 98%. "
+LINE_TURN = "The other 2% was your production database."
 
 LINE = LINE_OPEN + LINE_TURN
 
