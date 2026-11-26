@@ -41,6 +41,8 @@ def validate_line(line: str) -> None:
     """
     if not line or not line.strip():
         raise ValueError("line must not be blank")
+    if line != line.strip():
+        raise ValueError("line must not carry surrounding whitespace")
     if "\n" in line or "\r" in line:
         raise ValueError("line must be a single line, no newlines")
     if len(line) > MAX_LENGTH:
